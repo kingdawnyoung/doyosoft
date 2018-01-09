@@ -1,0 +1,39 @@
+[ {
+  "title": "设置中心",
+  "icon": "el-icon-setting",
+  "children": [{
+    "title": "特殊资质设置",
+    "name": "setting/specialQualification"
+  }, 
+  {
+    "title": "RNP-AR管理",
+    "name": "setting/specialAptitudeDetail/RNPDetail"
+  },
+  {
+    "title": "特殊机场管理",
+    "name": "setting/specialAptitudeDetail/SpecialDetail"
+  },
+  {
+    "title": "技术晋升规则设置",
+    "name": "setting/skillPromotion"
+  }]
+}, {
+  "title": "资质管理",
+  "icon": "el-icon-lock-combination",
+  "children": [{
+    "title": "资质管理监控提醒",
+    "name": "qualification/monitor"
+  }, {
+    "title": "飞行员综合信息查询",
+    "name": "pilot/information"
+  }, {
+    "title": "飞行员技术等级管理",
+    "name": "pilot/pilotGrade"
+  }, {
+    "title": "飞行员特殊资质管理",
+    "name": "pilot/specialQualification"
+  }, {
+    "title": "飞行员信息变更查询",
+    "name": "pilot/InfoChange"
+  }]
+}]

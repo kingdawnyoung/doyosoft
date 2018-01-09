@@ -1,2 +1,1 @@
-# kingdawnyoung
-HOME
+# kingdawnyoung.github.io
