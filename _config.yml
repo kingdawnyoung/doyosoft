@@ -1,0 +1,3 @@
+deploy:
+- type: git
+  repo: git@gitee.com:kingdawnyoung/kingdawnyoung.git
