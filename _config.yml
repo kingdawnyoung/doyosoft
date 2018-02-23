@@ -1,4 +1,15 @@
+author: KingZ
+title: Do IT
+theme: next
+description: Just Do IT
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 deploy:
 - type: git
-  repo: git@gitee.com:kingdawnyoung/kingdawnyoung.git
+  repo: git@gitee.com:doyosoft/doyosoft.git
   branch: master
