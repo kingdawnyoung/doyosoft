@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@gitee.com:doyosoft/doyosoft.git
-	branch = master
