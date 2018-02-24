@@ -7,8 +7,7 @@ title: Welcome
 ```js
 if(世界) {
   我
-}
-else {
+} else {
   你
 }
 ```

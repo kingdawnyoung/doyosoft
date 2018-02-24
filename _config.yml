@@ -2,6 +2,7 @@ author: KingZ
 title: Do IT
 theme: next
 description: Just Do IT
+language: zh-Hans
 
 search:
   path: search.xml
