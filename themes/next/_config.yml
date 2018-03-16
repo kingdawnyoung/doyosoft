@@ -743,7 +743,7 @@ reading_progress:
 
 # Use velocity to animate everything.
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # Transition variants:
@@ -802,7 +802,7 @@ canvas_nest: false
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
-three_waves: false
+three_waves: true
 # canvas_lines
 canvas_lines: false
 # canvas_sphere
@@ -831,7 +831,7 @@ vendors:
   _internal: lib
 
   # Internal version: 2.1.3
-  jquery:
+  jquery: //cdn.bootcss.com/jquery/2.1.3/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
@@ -848,11 +848,11 @@ vendors:
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity:
+  velocity: //cdn.bootcss.com/velocity/1.5.1/velocity.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity_ui:
+  velocity_ui: //cdn.bootcss.com/velocity/1.5.1/velocity.ui.min.js
 
   # Internal version: 0.7.9
   # See: https://faisalman.github.io/ua-parser-js/
@@ -860,7 +860,7 @@ vendors:
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome: https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+  fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
   # Internal version: 1
   # https://www.algolia.com
@@ -880,7 +880,7 @@ vendors:
   canvas_nest:
 
   # three
-  three:
+  three: //cdn.bootcss.com/three.js/84/three.min.js
 
   # three_waves
   # https://github.com/jjandxa/three_waves
