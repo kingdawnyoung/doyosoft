@@ -1,0 +1,3 @@
+# Redirect domain aliases to primary domain
+https://blog.doyo.ml/* https://www.doyo.ml/:splat 301!
+http://blog.doyo.ml/* https://www.doyo.ml/:splat 301!
