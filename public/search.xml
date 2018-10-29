@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[开启航空研发文档之旅]]></title>
-    <url>%2F2018%2F10%2F29%2FREADME%2F</url>
-    <content type="text"><![CDATA[启动本地环境12npm install # 安装依赖npm run start # 运行起来 文档书写文档使用markdown语法书写，存放./source/_posts目录。文档编译使用的是hexo，提供了Front-matter等功能。 Front-matterFront-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，提供了文章标题，创建日期，分类等信息，举例来说： 1234---title: Hello Worlddate: 2013/7/13 20:46:25--- 具体功能如下: 参数 描述 默认值 layout 布局 &nbsp; title 标题 &nbsp; date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） &nbsp; categories 分类（不适用于分页） &nbsp; permalink 覆盖文章网址 &nbsp; 分类和标签12345categories:- 前端- 基础tags:- nodejs 资源资源(Asset)表示除文章以为的内容，诸如图片，CSS，JS等文件。如果你的文章中需要插入图片最简单的方式是将他们放在source/images文件夹中，然后在文章中通过类似于![](/images/image.jpg)的方式访问它们。 构建文档是通过markdown书写，如果要放到服务器需要先编译，生成到public文件夹 1npm run build 部署将public文件夹内所有文件拷贝到ftp 或者放到其他静态文件服务器]]></content>
-      <categories>
-        <category>通用</category>
-      </categories>
-      <tags>
-        <tag>通用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Welcome]]></title>
-    <url>%2F2018%2F10%2F29%2Fwelcome%2F</url>
-    <content type="text"><![CDATA[世界上最遥远的距离我生活在if里而你生活在else里 12345if(世界) &#123; 我&#125; else &#123; 你&#125;]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[JavaScript 数组]]></title>
     <url>%2F2018%2F10%2F19%2FJavaScript%2F%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[数组数组（array）是按次序排列的一组值。每个值的位置都有编号（从0开始），整个数组用方括号表示。 12345let arr = ['a', 'b', 'c'];arr[0] // 'a'//任何类型的数据，都可以放入数组。let arr2 = [&#123;&#125;, true, null, undefined, function()&#123;&#125;, arr ] 数组也是对象1234//数组实际上也是对象let arr = ['a', 'b', 'c'];typeof arr // objectObject.keys(arr)//["1", "2", "3"] .length数组的length属性，返回数组的成员数量。 123456789101112let arr = ['a', 'b', 'c'];arr.length // 3//length属性的值总是比最大的那个整数键大1arr[100] = 1arr.length // 101//length值也是可写的，数组的成员数量会自动减少或增加到到length设置的值。arr.length = 2 // 2 itemsarr.length = 100 // 100 items//数组本质上是对象，所以我们也可以为数组添加其他属相，但这不会影响length值arr['a'] = 1;arr.length // 100 for…in循环和数组的遍历 1234567let arr = ['a', 'b', 'c'];for (var i in arr) &#123; console.log(arr[i]);&#125;//还会遍历非数字键arr['m'] = 1//所以推荐for, while, for...of循环 数组的空位123456789//前面的空位的例子let arr = ['a', 'b', 'c']arr[100]//这是有97个空位arr = ['a', ,'c']//中间也产生了一个空位arr[2]//空位返回undefinedarr = ['a', 'b', ]//这不会产生空位，数组末位的逗号会被默认移除 123456789101112//空位虽然返回undefined但与赋值undefined还是不一样的let arr = ['a', ,'c']arr.forEach(function (x, i) &#123; console.log(i + '. ' + x);//输出忽略空位&#125;)for (var i in arr) &#123; console.log(i);//输出忽略空位&#125;Object.keys(arr)//[]， 输出忽略空位 扩展运算符扩展运算符（spread）是三个点（...），将一个数组转为用逗号分隔的参数序列。 12let arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]console.log(...arr) //output， a b c 123function fn(v, w, x, y, z) &#123; &#125;const args = [0, 1];fn(-1, ...args, 2, ...[3]); 用途 123456//数组潜复制const a1 = [1, 2];// 写法一const a2 = [...a1];// 写法二const [...a2] = a1; 12345//数组合并let arr1 = ['a', 'b'];let arr2 = ['c'];let arr3 = ['d', 'e'];[...arr1, ...arr2, ...arr3] //[ 'a', 'b', 'c', 'd', 'e' ] 1234//结合解构赋值const [first, ...rest] = [1, 2, 3, 4, 5];first // 1rest // [2, 3, 4, 5] 12//将字符串转为数组[...'hello'] // [ "h", "e", "l", "l", "o" ] 123//实现了 Iterator 接口的对象let nodeList = document.querySelectorAll('div');let array = [...nodeList]; 12345678910111213141516//扩展运算符内部调用的是数据结构的 `Iterator` 接口，因此只要具有 Iterator 接口的对象，都可以使用扩展运算符，比如 Map 结构。let map = new Map([ [1, 'one'], [2, 'two'], [3, 'three'],]);let arr = [...map.keys()]; // [1, 2, 3]const go = function* ()&#123; yield 1; yield 2; yield 3;&#125;;[...go()] // [1, 2, 3] Array.isArray()判断变量值是否为数组 1234Array.isArray(undefined) //falseArray.isArray(123) //falseArray.isArray(document.querySelectorAll("div")) //falseArray.isArray([]) //true Array.from()方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括ES6新增的数据结构Set和Map） 12345678let arrayLike = &#123; '0': 'a', '1': 'b', '2': 'c', length: 3&#125;;let arr2 = Array.from(arrayLike); // ['a', 'b', 'c'] 12let nodeList = document.querySelectorAll('div');Array.from(nodeList) Array.from 还提供第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组。 12Array.from([1, , 2, , 3], (n) =&gt; n || 0)// [1, 0, 2, 0, 3] 只要有一个原始的数据结构，你就可以先对它的值进行处理，然后转成规范的数组结构，进而就可以使用数量众多的数组方法。 1Array.from(&#123; length: 2 &#125;, () =&gt; 'xx') // ["xx", "xx"] Array.of方法用于将一组值，转换为数组 1Array.of(1, false, undefined) //[1, false, undefined] find和findIndex数组实例的find方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。 1[1, , 2, , 3].find(function(item)&#123;return item === 2;&#125;)//2， 返回第一个值等于2的元素 数组实例的findIndex方法的用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。 fill(item, startIndex, endIndex)填充一个数组 1['a', 'b', 'c'].fill(7, 1, 2) //['a', 7, 'c'] entries，keys它们都返回一个遍历器对象, 可以用for…of循环进行遍历 12['a', 'b'].keys()['a', 'b'].entries() includesArray.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似 1['a', 'b'].includes('a') //true push, pop, shift, unshift1234[1, 2].push(3, 4) //[1, 2, 3， 4]，在数组末位插入元素, 返回数组长度[1, 2].pop() //[1], 删除数组的最后一个元素， 返回删除的元素[1, 2].shift() //[2], 删除第一个元素， 返回删除的元素[1, 2].unshift(-1, 0)//[-1, 0, 1, 2 ], 在数组首位插入元素，返回数组长度 joinjoin方法以参数作为分隔符，将所有数组成员组成一个字符串返回。如果不提供参数，默认用逗号分隔。 concat方法用于多个数组的合并。它将新数组的成员，添加到原数组的尾部，然后返回一个新数组，原数组不变。 reverse方法用于颠倒数组中元素的顺序，返回改变后的数组。注意，该方法将改变原数组。 slice(startIndex, upToIndex)方法用于提取原数组的一部分，返回一个新数组，原数组不变 它的第一个参数为起始位置，第二个参数为终止位置（但该位置的元素本身不包括在内）。如果省略第二个参数，则一直返回到原数组的最后一个成员。 12var a = ['a', 'b', 'c'];a.slice(1, 2) // ["b"] 123//方法的参数是负数，则表示倒数计算的位置。var a = ['a', 'b', 'c'];a.slice(-2, -1) // ["b"] splice(index, countToRemove, addElement1, addElement2, …)方法用于删除原数组的一部分成员，并可以在被删除的位置添加入新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。第一个参数是删除的起始位置，第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素。 sort对数组成员进行排序。默认按照字典排序，也可以传入函数按照自定义方法排序。函数有两个参数，如果返回值大于0，表示第一个元素排在第二个元素后面；其他情况下，都是第一个元素排在第二个元素前面。 123456789101112[ &#123; name: "张三", age: 30 &#125;, &#123; name: "李四", age: 24 &#125;, &#123; name: "王五", age: 28 &#125;].sort(function (o1, o2) &#123; return o1.age - o2.age;&#125;)// [// &#123; name: "李四", age: 24 &#125;,// &#123; name: "王五", age: 28 &#125;,// &#123; name: "张三", age: 30 &#125;// ] map对数组的所有成员依次调用一个函数，根据函数结果返回一个新数组。 123456var numbers = [1, 2, 3];numbers.map(function (item, index, array) &#123; return item + 1;&#125;);// [2, 3, 4] forEach也是遍历数组的所有成员，执行某种操作 123[2, 5, 9].forEach(function(item, index, array)&#123; console.log(item);&#125;); filterfilter参数是一个函数，所有数组成员依次执行该函数，返回结果为true的成员组成一个新数组返回。该方法不会改变原数组。 1234[1, 2, 3, 4, 5].filter(function (item) &#123; return item &gt; 3;&#125;);//[4, 5] some，everysome方法是只要有一个数组成员的返回值是true就返回true every方法则是所有数组成员的返回值都是true才返回true reduce，reduceRight方法依次处理数组的每个成员，最终累计为一个值。 12341.累积变量，默认为数组的第一个成员2.当前变量，默认为数组的第二个成员3.当前位置（从0开始）4.原数组 indexOf，lastIndexOf方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1; 第二个参数表示开始位置 1['a', 'b', 'c'].indexOf('a', 1) // -1 lastIndexOf方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回-1。]]></content>
@@ -42,6 +26,22 @@
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开启文档之旅]]></title>
+    <url>%2F2018%2F03%2F20%2FREADME%2F</url>
+    <content type="text"><![CDATA[启动本地环境12npm install # 安装依赖npm run start # 运行起来 文档书写文档使用markdown语法书写，存放./source/_posts目录。文档编译使用的是hexo，提供了Front-matter等功能。 Front-matterFront-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，提供了文章标题，创建日期，分类等信息，举例来说： 1234---title: Hello Worlddate: 2013/7/13 20:46:25--- 具体功能如下: 参数 描述 默认值 layout 布局 &nbsp; title 标题 &nbsp; date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） &nbsp; categories 分类（不适用于分页） &nbsp; permalink 覆盖文章网址 &nbsp; 分类和标签12345categories:- 前端- 基础tags:- nodejs 资源资源(Asset)表示除文章以为的内容，诸如图片，CSS，JS等文件。如果你的文章中需要插入图片最简单的方式是将他们放在source/images文件夹中，然后在文章中通过类似于![](/images/image.jpg)的方式访问它们。 构建文档是通过markdown书写，如果要放到服务器需要先编译，生成到public文件夹 1npm run build 部署将public文件夹内所有文件拷贝到ftp 或者放到其他静态文件服务器]]></content>
+      <categories>
+        <category>通用</category>
+      </categories>
+      <tags>
+        <tag>通用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Welcome]]></title>
+    <url>%2F2018%2F03%2F20%2Fwelcome%2F</url>
+    <content type="text"><![CDATA[世界上最遥远的距离我生活在if里而你生活在else里 12345if(世界) &#123; 我&#125; else &#123; 你&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[开始React之旅]]></title>
