@@ -10,34 +10,37 @@ categories: JavaScript
 1. 变量在声明后才可以使用
 1. 多个变量同时声明，使用逗号( `,` )隔开，每个变量另起一行，最后一个变量后添加分号( `;` )
 
-```js
-let foo,
-  bar;
-```
+    ```js
+    let foo,
+      bar;
+    ```
 
 1. 变量命名应当采用驼峰命名格式，普通变量的第一个单词应当是一个名词，函数名第一个单词应当是动词
 
-```js
-let dialogShow = true;
+    ```js
+    let dialogShow = true;
 
-function search() {
-  // do something
-}
-```
+    function search() {
+      // do something
+    }
+    ```
+
 1. 初始化一个值尽量使用字面量
-```js
-//good
-let str = '',
-  obj = {},
-  arr = [],
-  bool = true;
 
-//bad
-let str = new String(),
-  obj = new Object(),
-  arr = new Array(),
-  bool = new Boolean()
-```
+    ```js
+    //good
+    let str = '',
+      obj = {},
+      arr = [],
+      bool = true;
+
+    //bad
+    let str = new String(),
+      obj = new Object(),
+      arr = new Array(),
+      bool = new Boolean()
+    ```
+
 1. 函数声明
    * 尽量使用声明式，因为这样函数会提升，保证在使用时就已经声明
    * 函数名和开始圆括号之间不应当有空格。
@@ -46,11 +49,13 @@ let str = new String(),
    * 开始和结束括号之间不应该有空格。
    * 参数名之间应当在逗号之后保留一个空格。
    * 函数体应当保持一级缩进。
-    ```js
-    function fn() {
-      // do something
-    }
-    ```
+
+      ```js
+      function fn() {
+        // do something
+      }
+      ```
+
 1. 多行对象声明
    * 起始左大括号应当同表达式保持同一行。
    * 每个属性的名值对应当保持一个缩进（两个空格），第一个属性应当在左大括号后另起一行。
@@ -58,15 +63,15 @@ let str = new String(),
    * 倘若属性值是函数类型，函数体应当在属性名之下另起一行
    * 结束的右大括号应当独占一行。
    * 对象作为函数参数时，起始大括号应当同函数名一行
-    ```js
-    let obj = {
-      foo: 'foo',
-      bar: 'bar',
-      fn: function() {
-        // do something
-      },
-    };
-    ```
+      ```js
+      let obj = {
+        foo: 'foo',
+        bar: 'bar',
+        fn: function() {
+          // do something
+        },
+      };
+      ```
 
 1. 严格模式应当仅限于在函数内部使用 `'use strict'`
     ```js
@@ -87,29 +92,29 @@ let str = new String(),
    * 大括号之间的语句比外层多缩进一层
    * 开始的大括号应当在复合语句所在行的末尾；结尾的大括号独占一行，并与复合语句的开始保持对齐
    * 诸如`if`、`for`等控制结构的语句都需要用大括号括起来，即使仅有一条语句
-   ```js
-   for(let i = 0, len = arr.length; i < len; i++) {
-     //do something
-   }
-   ```
+      ```js
+      for(let i = 0, len = arr.length; i < len; i++) {
+        //do something
+      }
+      ```
 1. 使用 `===` 表示用于判断等于，使用 `!==` 用于判断不等
-   ```js
-   // good
-   a === b;
-   b !== c;
+    ```js
+    // good
+    a === b;
+    b !== c;
 
-   // bad
-   a == b;
-   b != c;
-   ```
+    // bad
+    a == b;
+    b != c;
+    ```
 1. 三元操作符应当仅仅用在条件赋值语句中，不要作为`if`语句的替代品
-  ```js
-  // good
-  let a = condition ? c : d;
+    ```js
+    // good
+    let a = condition ? c : d;
 
-  // bad
-  let a = condition ? fn1() : fn2();
-  ```
+    // bad
+    let a = condition ? fn1() : fn2();
+    ```
 1. 每一行一条语句，所有简单的语句都应该以分号（;）结束
 1. 避免使用 `for...in` 遍历数组，推荐使用 `for(;;)` 遍历数组
 1. 避免在非函数的代码块中声明函数函数

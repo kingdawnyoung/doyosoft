@@ -118,7 +118,7 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Do IT">
 <meta property="og:description" content="基本 变量在声明后才可以使用 多个变量同时声明，使用逗号( , )隔开，每个变量另起一行，最后一个变量后添加分号( ; )  12let foo,  bar;  变量命名应当采用驼峰命名格式，普通变量的第一个单词应当是一个名词，函数名第一个单词应当是动词  12345let dialogShow = true;function search() &amp;#123;  // do something&amp;#1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-29T09:49:45.674Z">
+<meta property="og:updated_time" content="2019-02-19T08:54:07.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 代码规范">
 <meta name="twitter:description" content="基本 变量在声明后才可以使用 多个变量同时声明，使用逗号( , )隔开，每个变量另起一行，最后一个变量后添加分号( ; )  12let foo,  bar;  变量命名应当采用驼峰命名格式，普通变量的第一个单词应当是一个名词，函数名第一个单词应当是动词  12345let dialogShow = true;function search() &amp;#123;  // do something&amp;#1">
@@ -392,16 +392,14 @@ var _hmt = _hmt || [];
       
         <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ol>
 <li>变量在声明后才可以使用</li>
-<li>多个变量同时声明，使用逗号( <code>,</code> )隔开，每个变量另起一行，最后一个变量后添加分号( <code>;</code> )</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo,</span><br><span class="line">  bar;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>变量命名应当采用驼峰命名格式，普通变量的第一个单词应当是一个名词，函数名第一个单词应当是动词</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> dialogShow = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">search</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<li><p>多个变量同时声明，使用逗号( <code>,</code> )隔开，每个变量另起一行，最后一个变量后添加分号( <code>;</code> )</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo,</span><br><span class="line">  bar;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量命名应当采用驼峰命名格式，普通变量的第一个单词应当是一个名词，函数名第一个单词应当是动词</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> dialogShow = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">search</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>初始化一个值尽量使用字面量</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//good</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">''</span>,</span><br><span class="line">  obj = &#123;&#125;,</span><br><span class="line">  arr = [],</span><br><span class="line">  bool = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//bad</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(),</span><br><span class="line">  obj = <span class="keyword">new</span> <span class="built_in">Object</span>(),</span><br><span class="line">  arr = <span class="keyword">new</span> <span class="built_in">Array</span>(),</span><br><span class="line">  bool = <span class="keyword">new</span> <span class="built_in">Boolean</span>()</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//good</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">''</span>,</span><br><span class="line">  obj = &#123;&#125;,</span><br><span class="line">  arr = [],</span><br><span class="line">  bool = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//bad</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(),</span><br><span class="line">  obj = <span class="keyword">new</span> <span class="built_in">Object</span>(),</span><br><span class="line">  arr = <span class="keyword">new</span> <span class="built_in">Array</span>(),</span><br><span class="line">  bool = <span class="keyword">new</span> <span class="built_in">Boolean</span>()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数声明</p>
 <ul>
@@ -411,7 +409,8 @@ var _hmt = _hmt || [];
 <li>右侧的大括号应当同function关键字保持同一行。</li>
 <li>开始和结束括号之间不应该有空格。</li>
 <li>参数名之间应当在逗号之后保留一个空格。</li>
-<li>函数体应当保持一级缩进。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>函数体应当保持一级缩进。</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -422,7 +421,7 @@ var _hmt = _hmt || [];
 <li>每个属性的名值对应当使用不含引号的属性名，其后紧跟一个冒号，而后插入一个空格，再加上值</li>
 <li>倘若属性值是函数类型，函数体应当在属性名之下另起一行</li>
 <li>结束的右大括号应当独占一行。</li>
-<li>对象作为函数参数时，起始大括号应当同函数名一行<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'foo'</span>,</span><br><span class="line">  bar: <span class="string">'bar'</span>,</span><br><span class="line">  fn: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li>对象作为函数参数时，起始大括号应当同函数名一行 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'foo'</span>,</span><br><span class="line">  bar: <span class="string">'bar'</span>,</span><br><span class="line">  fn: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -439,15 +438,15 @@ var _hmt = _hmt || [];
 <ul>
 <li>大括号之间的语句比外层多缩进一层</li>
 <li>开始的大括号应当在复合语句所在行的末尾；结尾的大括号独占一行，并与复合语句的开始保持对齐</li>
-<li>诸如<code>if</code>、<code>for</code>等控制结构的语句都需要用大括号括起来，即使仅有一条语句<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">  <span class="comment">//do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>诸如<code>if</code>、<code>for</code>等控制结构的语句都需要用大括号括起来，即使仅有一条语句 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">  <span class="comment">//do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>使用 <code>===</code> 表示用于判断等于，使用 <code>!==</code> 用于判断不等</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line">a === b;</span><br><span class="line">b !== c;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">a == b;</span><br><span class="line">b != c;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line">a === b;</span><br><span class="line">b !== c;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">a == b;</span><br><span class="line">b != c;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>三元操作符应当仅仅用在条件赋值语句中，不要作为<code>if</code>语句的替代品</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">let</span> a = condition ? c : d;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">let</span> a = condition ? fn1() : fn2();</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">let</span> a = condition ? c : d;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">let</span> a = condition ? fn1() : fn2();</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>每一行一条语句，所有简单的语句都应该以分号（;）结束</p>
 </li>
