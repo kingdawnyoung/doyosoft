@@ -4,6 +4,9 @@ theme: next
 description: Just Do IT
 language: zh-CN
 
+skip_render: 
+  - admin/**
+
 search:
   path: search.xml
   field: post
