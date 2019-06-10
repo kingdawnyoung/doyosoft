@@ -36,6 +36,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Welcome]]></title>
+    <url>%2F2018%2F03%2F20%2Fwelcome%2F</url>
+    <content type="text"><![CDATA[世界上最遥远的距离我生活在if里而你生活在else里 12345if(世界) &#123; 我&#125; else &#123; 你&#125;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[开启文档之旅]]></title>
     <url>%2F2018%2F03%2F20%2FREADME%2F</url>
     <content type="text"><![CDATA[启动本地环境12npm install # 安装依赖npm run start # 运行起来 文档书写文档使用markdown语法书写，存放./source/_posts目录。文档编译使用的是hexo，提供了Front-matter等功能。 Front-matterFront-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，提供了文章标题，创建日期，分类等信息，举例来说： 1234---title: Hello Worlddate: 2013/7/13 20:46:25--- 具体功能如下: 参数 描述 默认值 layout 布局 &nbsp; title 标题 &nbsp; date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） &nbsp; categories 分类（不适用于分页） &nbsp; permalink 覆盖文章网址 &nbsp; 分类和标签12345categories:- 前端- 基础tags:- nodejs 资源资源(Asset)表示除文章以为的内容，诸如图片，CSS，JS等文件。如果你的文章中需要插入图片最简单的方式是将他们放在source/images文件夹中，然后在文章中通过类似于![](/images/image.jpg)的方式访问它们。 构建文档是通过markdown书写，如果要放到服务器需要先编译，生成到public文件夹 1npm run build 部署将public文件夹内所有文件拷贝到ftp 或者放到其他静态文件服务器]]></content>
@@ -45,11 +50,6 @@
       <tags>
         <tag>通用</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Welcome]]></title>
-    <url>%2F2018%2F03%2F20%2Fwelcome%2F</url>
-    <content type="text"><![CDATA[世界上最遥远的距离我生活在if里而你生活在else里 12345if(世界) &#123; 我&#125; else &#123; 你&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[开始React之旅]]></title>
